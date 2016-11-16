@@ -13,6 +13,7 @@ import initialise from './Ractive/initialise';
 import { getCSS } from './global/css';
 import { escapeKey, unescapeKey } from './shared/keypaths';
 import { joinKeys, splitKeypath } from './Ractive/static/keypaths';
+import readTemplate from './view/helpers/template';
 
 // Ractive.js makes liberal use of things like Array.prototype.indexOf. In
 // older browsers, these are made available via a shim - here, we do a quick
@@ -76,6 +77,7 @@ defineProperties( Ractive, {
 	splitKeypath:   { value: splitKeypath },
 	unescapeKey:    { value: unescapeKey },
 	getCSS:         { value: getCSS },
+	template:       { value: readTemplate },
 
 	// namespaced constructors
 	Promise:        { value: Promise },
